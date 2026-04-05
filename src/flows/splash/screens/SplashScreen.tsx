@@ -1,13 +1,276 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+// --- CSS keyframes injected once via a style tag ---
+const KEYFRAMES = `
+  @keyframes splashFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0);    }
+  }
+  @keyframes splashScaleUp {
+    from { opacity: 0; transform: scale(0.92) translateY(12px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0);    }
+  }
+  @keyframes splashDotPulse {
+    0%,  40%  { transform: scale(1);    opacity: 0.35; }
+    20%       { transform: scale(1.35); opacity: 1;    }
+    100%      { transform: scale(1);    opacity: 0.35; }
+  }
+`;
+
+// Shared animation helper
+function fadeUp(delay: number): React.CSSProperties {
+  return {
+    opacity: 0,
+    animation: `splashFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) ${delay}ms forwards`,
+  };
+}
+
+// --- Logo SVG ---
+function LogoMark() {
+  return (
+    <svg
+      width="128"
+      height="128"
+      viewBox="0 0 128 128"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      {/* Outer dark circle */}
+      <circle cx="64" cy="64" r="64" fill="#0A0A0B" />
+      <circle cx="64" cy="64" r="63.5" stroke="#1C1C1F" strokeWidth="1" />
+      {/* Inner lime disc */}
+      <circle cx="64" cy="64" r="44" fill="#C8FF00" />
+      {/* Blocky square "C" mark — three-sided square, right side open */}
+      {/*
+        The C occupies roughly 60% of the 88px disc diameter = ~52px.
+        Centered: top-left at (64 - 26, 64 - 26) = (38, 38)
+        Stroke is 7px; corners are square (butt caps, miter joins)
+      */}
+      <path
+        d="M82 42 H46 V86 H82"
+        stroke="#050505"
+        strokeWidth="7"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
+// --- Small wordmark "C" icon ---
+function WordmarkIcon() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <rect width="14" height="14" rx="3" fill="#C8FF00" />
+      <path
+        d="M10.5 3.5 H3.5 V10.5 H10.5"
+        stroke="#050505"
+        strokeWidth="2"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
+// --- Loading dots ---
+function LoadingDots() {
+  // Dot 1 active at 0ms, Dot 2 at 200ms, Dot 3 at 400ms
+  const dots = [0, 200, 400];
+  return (
+    <div
+      className="flex items-center justify-center"
+      style={{ gap: 8 }}
+      role="status"
+      aria-label="Loading"
+    >
+      {dots.map((delay, i) => (
+        <span
+          key={i}
+          style={{
+            display: 'inline-block',
+            width: i === 0 ? 10 : 8,
+            height: i === 0 ? 10 : 8,
+            borderRadius: '50%',
+            background: i === 0 ? '#C8FF00' : '#2A2A20',
+            animation: `splashDotPulse 1.5s ease-in-out ${delay}ms infinite`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function SplashScreen() {
+  const navigate = useNavigate();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    timerRef.current = setTimeout(() => {
+      navigate('/welcome');
+    }, 2800);
+
+    return () => {
+      if (timerRef.current !== null) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, [navigate]);
+
   return (
-    <section className="flex flex-1 flex-col items-center justify-center gap-4 p-6">
-      <h2 className="text-2xl font-bold">Splash</h2>
-      <p className="text-sm text-gray-500">Phase 1 placeholder</p>
-      <Link to="/welcome" className="text-blue-600 underline">
-        → Welcome
-      </Link>
-    </section>
+    <>
+      {/* Inject keyframes */}
+      <style>{KEYFRAMES}</style>
+
+      {/*
+        Full-height flex column.
+        Safe-area padding: top min(env(safe-area-inset-top), 48px), bottom min 32px.
+        Horizontal padding: 28px.
+        Background: #050505
+      */}
+      <main
+        className="flex flex-col items-center min-h-[100dvh]"
+        style={{
+          background: '#050505',
+          paddingTop: 'max(env(safe-area-inset-top), 48px)',
+          paddingBottom: 'max(env(safe-area-inset-bottom), 32px)',
+          paddingLeft: 28,
+          paddingRight: 28,
+        }}
+      >
+        {/* ── Eyebrow ── */}
+        <div style={fadeUp(0)}>
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: '0.6rem',
+              color: '#C8FF00',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              textAlign: 'center',
+              fontWeight: 500,
+              marginBottom: 24,
+            }}
+          >
+            Cost of Living Tracker
+          </p>
+        </div>
+
+        {/* ── Logo ── */}
+        <div
+          style={{
+            opacity: 0,
+            animation: `splashScaleUp 0.7s cubic-bezier(0.16,1,0.3,1) 100ms forwards`,
+            marginBottom: 20,
+          }}
+        >
+          <LogoMark />
+        </div>
+
+        {/* ── Wordmark ── */}
+        <div
+          className="flex items-center"
+          style={{ ...fadeUp(250), gap: 7, marginBottom: 48 }}
+        >
+          <WordmarkIcon />
+          <span
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 900,
+              fontSize: '0.95rem',
+              letterSpacing: '0.15em',
+              color: '#FAFAFA',
+            }}
+          >
+            COSTRA
+          </span>
+        </div>
+
+        {/* ── Title ── */}
+        <div style={fadeUp(400)}>
+          <p
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 800,
+              fontSize: '1.5rem',
+              lineHeight: 1.2,
+              color: '#FAFAFA',
+              textAlign: 'center',
+              maxWidth: 280,
+              marginBottom: 16,
+            }}
+          >
+            Daily money control for real life in Sri Lanka.
+          </p>
+        </div>
+
+        {/* ── Body ── */}
+        <div style={fadeUp(550)}>
+          <p
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 300,
+              fontSize: '0.85rem',
+              lineHeight: 1.65,
+              color: '#A1A1AA',
+              textAlign: 'center',
+              maxWidth: 300,
+            }}
+          >
+            Track essentials, stay ahead of bills, and spot pressure before it hits.
+          </p>
+        </div>
+
+        {/* ── Spacer ── */}
+        <div className="flex-1" />
+
+        {/* ── Loading section ── */}
+        <div
+          className="flex flex-col items-center"
+          style={{ ...fadeUp(750), gap: 12, marginBottom: 36 }}
+        >
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: '0.65rem',
+              letterSpacing: '0.15em',
+              color: '#52525B',
+              textAlign: 'center',
+            }}
+          >
+            Preparing your dashboard
+          </p>
+          <LoadingDots />
+        </div>
+
+        {/* ── Footer ── */}
+        <div style={fadeUp(900)}>
+          <p
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 300,
+              fontSize: '0.72rem',
+              lineHeight: 1.6,
+              color: '#52525B',
+              textAlign: 'center',
+              maxWidth: 260,
+            }}
+          >
+            Built for everyday families, workers, and small households.
+          </p>
+        </div>
+      </main>
+    </>
   );
 }
