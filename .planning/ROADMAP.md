@@ -12,7 +12,7 @@ Costra's frontend is built in strict dependency order: scaffold first, then desi
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Scaffold** - Vite + React + TS + Tailwind + React Router v6 base with mobile-web shell wired correctly
+- [x] **Phase 1: Scaffold** - Vite + React + TS + Tailwind + React Router v6 base with mobile-web shell wired correctly (completed 2026-04-05)
 - [ ] **Phase 2: Design Tokens** - All Costra DS tokens extracted and wired into Tailwind v4 `@theme`; visual reference page verifies every token
 - [ ] **Phase 3: Primitives + Mock Data** - Complete primitive library and centralized typed mock data layer; acceptance gate for all screen work
 - [ ] **Phase 4: Auth Flows** - Splash, Welcome, Onboarding, Register, and Login screens rendered under AuthLayout with navigation wired
@@ -31,10 +31,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. `index.html` includes `viewport-fit=cover` and the app shell uses `min-h-[100dvh]` (not `100vh`)
   3. React Router v6 route tree is wired with `AuthLayout` and `AppLayout` each rendering `<Outlet />` — visiting `/` and `/app` renders a placeholder without a blank screen
   4. Route-level code splitting with `React.lazy` + `<Suspense>` is in place and confirmed in the network tab (separate chunks per layout)
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: Scaffold Vite + React + TS + Tailwind + React Router v6; configure viewport and mobile shell; wire layout routes with Outlet and code splitting
+- [ ] 01-01-PLAN.md — Scaffold Vite + React + TS + Tailwind + React Router v6; configure viewport and mobile shell; wire layout routes with Outlet and code splitting
 
 ### Phase 2: Design Tokens
 **Goal**: Every Costra design system token (Color, Typography, Spacing, Elevation, Border & Radius, Grid, Iconography) is extracted from the Storybook foundation pages, defined in `src/tokens/index.css` via Tailwind v4 `@theme`, and verified against a live token reference page before any component is written.
@@ -138,7 +138,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 0/1 | Not started | - |
+| 1. Scaffold | 1/1 | Complete   | 2026-04-05 |
 | 2. Design Tokens | 0/1 | Not started | - |
 | 3. Primitives + Mock Data | 0/2 | Not started | - |
 | 4. Auth Flows | 0/4 | Not started | - |

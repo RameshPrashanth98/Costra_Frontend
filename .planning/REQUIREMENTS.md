@@ -9,10 +9,10 @@ Requirements for initial frontend release. Frontend-only, hardcoded data, mobile
 
 ### Foundation
 
-- [ ] **FND-01**: Project scaffolded with Vite + React + TypeScript (strict) + Tailwind CSS + React Router v6
-- [ ] **FND-02**: Mobile-web viewport configured (`viewport-fit=cover`, `100dvh` shell, safe-area insets)
-- [ ] **FND-03**: Route-level code splitting via `React.lazy` + `<Suspense>` in place from day one
-- [ ] **FND-04**: `AuthLayout` and `AppLayout` layout routes with `<Outlet />` wired and smoke-tested
+- [x] **FND-01**: Project scaffolded with Vite + React + TypeScript (strict) + Tailwind CSS + React Router v6
+- [x] **FND-02**: Mobile-web viewport configured (`viewport-fit=cover`, `100dvh` shell, safe-area insets)
+- [x] **FND-03**: Route-level code splitting via `React.lazy` + `<Suspense>` in place from day one
+- [x] **FND-04**: `AuthLayout` and `AppLayout` layout routes with `<Outlet />` wired and smoke-tested
 
 ### Design Tokens
 
@@ -148,10 +148,10 @@ Populated during roadmap creation (2026-04-05).
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FND-01 | Phase 1: Scaffold | Pending |
-| FND-02 | Phase 1: Scaffold | Pending |
-| FND-03 | Phase 1: Scaffold | Pending |
-| FND-04 | Phase 1: Scaffold | Pending |
+| FND-01 | Phase 1: Scaffold | Complete |
+| FND-02 | Phase 1: Scaffold | Complete |
+| FND-03 | Phase 1: Scaffold | Complete |
+| FND-04 | Phase 1: Scaffold | Complete |
 | TOK-01 | Phase 2: Design Tokens | Pending |
 | TOK-02 | Phase 2: Design Tokens | Pending |
 | TOK-03 | Phase 2: Design Tokens | Pending |
