@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 export default function AppLayout() {
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-md flex-col bg-gray-50">
-      <header className="px-6 pt-[calc(env(safe-area-inset-top)+1rem)] pb-4">
+      <header className="px-6 pb-4 pt-[calc(env(safe-area-inset-top)+1rem)]">
         <h1 className="text-lg font-semibold tracking-tight">Costra App</h1>
       </header>
       <main className="flex-1 overflow-y-auto px-6 pb-[calc(env(safe-area-inset-bottom)+4rem)]">

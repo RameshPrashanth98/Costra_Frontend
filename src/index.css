@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "./tokens/index.css";
+@import 'tailwindcss';
+@import './tokens/index.css';
 
 /* Mobile-web baseline — prevents iOS 300ms tap delay, pull-to-refresh, rubberband. */
 html,
@@ -13,7 +13,11 @@ body {
 
 body {
   touch-action: manipulation;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
   /* Nunito Sans wiring deferred to Phase 2 */
 }
 
