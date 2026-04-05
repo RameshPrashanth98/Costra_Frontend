@@ -5,7 +5,7 @@ milestone_name: milestone
 status: completed
 stopped_at: Completed 01-scaffold-01-01-PLAN.md
 last_updated: "2026-04-05T18:02:00.033Z"
-last_activity: 2026-04-05 — Phase 1 Scaffold executed; Vite + React + TS + Tailwind v4 + React Router v6 skeleton deployed
+last_activity: 2026-04-06 — Quick task 260406-05v: Splash screen rebuilt to HIFI fidelity with CSS animations
 progress:
   total_phases: 7
   completed_phases: 1
@@ -78,8 +78,14 @@ None.
 - [Phase 2]: Exact token values (colors, spacing scale, font sizes, radii) are unknown until hi-fi screens are uploaded or foundation pages are fetched. Do not hardcode any values in Phase 3 primitives until Phase 2 is complete.
 - [General]: Requirements file header says 54 v1 requirements but only 52 distinct requirement IDs exist in the file body. All 52 are mapped. Discrepancy is 2 — likely a counting error in the original file.
 
+## Quick Tasks Completed
+
+| ID | Description | Date | Commits | Files Changed |
+|----|-------------|------|---------|---------------|
+| 260406-05v | Splash screen HIFI fidelity + animations | 2026-04-06 | c00f2d8, 7af89be | index.html, SplashScreen.tsx |
+
 ## Session Continuity
 
-Last session: 2026-04-05T17:58:30.256Z
-Stopped at: Completed 01-scaffold-01-01-PLAN.md
+Last session: 2026-04-06T00:00:00Z
+Stopped at: Completed quick task 260406-05v (Splash screen HIFI)
 Resume file: None
