@@ -118,7 +118,7 @@ export default function SplashScreen() {
 
   useEffect(() => {
     timerRef.current = setTimeout(() => {
-      navigate('/welcome');
+      navigate('/onboarding');
     }, 2800);
 
     return () => {
