@@ -144,17 +144,68 @@ Explicitly excluded for v1. Documented to prevent scope creep.
 
 ## Traceability
 
-Populated during roadmap creation.
+Populated during roadmap creation (2026-04-05).
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (to be filled by roadmapper) | | |
+| FND-01 | Phase 1: Scaffold | Pending |
+| FND-02 | Phase 1: Scaffold | Pending |
+| FND-03 | Phase 1: Scaffold | Pending |
+| FND-04 | Phase 1: Scaffold | Pending |
+| TOK-01 | Phase 2: Design Tokens | Pending |
+| TOK-02 | Phase 2: Design Tokens | Pending |
+| TOK-03 | Phase 2: Design Tokens | Pending |
+| PRM-01 | Phase 3: Primitives + Mock Data | Pending |
+| PRM-02 | Phase 3: Primitives + Mock Data | Pending |
+| PRM-03 | Phase 3: Primitives + Mock Data | Pending |
+| PRM-04 | Phase 3: Primitives + Mock Data | Pending |
+| PRM-05 | Phase 3: Primitives + Mock Data | Pending |
+| PRM-06 | Phase 3: Primitives + Mock Data | Pending |
+| PRM-07 | Phase 3: Primitives + Mock Data | Pending |
+| DAT-01 | Phase 3: Primitives + Mock Data | Pending |
+| DAT-02 | Phase 3: Primitives + Mock Data | Pending |
+| DAT-03 | Phase 3: Primitives + Mock Data | Pending |
+| DAT-04 | Phase 3: Primitives + Mock Data | Pending |
+| DAT-05 | Phase 3: Primitives + Mock Data | Pending |
+| SPL-01 | Phase 4: Auth Flows | Pending |
+| SPL-02 | Phase 4: Auth Flows | Pending |
+| WEL-01 | Phase 4: Auth Flows | Pending |
+| ONB-01 | Phase 4: Auth Flows | Pending |
+| ONB-02 | Phase 4: Auth Flows | Pending |
+| ONB-03 | Phase 4: Auth Flows | Pending |
+| REG-01 | Phase 4: Auth Flows | Pending |
+| REG-02 | Phase 4: Auth Flows | Pending |
+| REG-03 | Phase 4: Auth Flows | Pending |
+| REG-04 | Phase 4: Auth Flows | Pending |
+| LOG-01 | Phase 4: Auth Flows | Pending |
+| LOG-02 | Phase 4: Auth Flows | Pending |
+| LOG-03 | Phase 4: Auth Flows | Pending |
+| HOM-01 | Phase 5: Home + Track Flows | Pending |
+| HOM-02 | Phase 5: Home + Track Flows | Pending |
+| HOM-03 | Phase 5: Home + Track Flows | Pending |
+| TRK-01 | Phase 5: Home + Track Flows | Pending |
+| TRK-02 | Phase 5: Home + Track Flows | Pending |
+| TRK-03 | Phase 5: Home + Track Flows | Pending |
+| TRK-04 | Phase 5: Home + Track Flows | Pending |
+| WAL-01 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| WAL-02 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| WAL-03 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| INS-01 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| INS-02 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| INS-03 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| PRO-01 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| PRO-02 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| PRO-03 | Phase 6: Wallet + Insights + Profile Flows | Pending |
+| NAV-01 | Phase 7: Navigation + Polish | Pending |
+| NAV-02 | Phase 7: Navigation + Polish | Pending |
+| NAV-03 | Phase 7: Navigation + Polish | Pending |
+| NAV-04 | Phase 7: Navigation + Polish | Pending |
 
 **Coverage:**
-- v1 requirements: 54 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 54 ⚠️ (will be resolved by roadmapper)
+- v1 requirements: 52 mapped (file header stated 54; 52 distinct IDs found in file body — 2-count discrepancy noted)
+- Mapped to phases: 52
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-05 after initialization*
+*Last updated: 2026-04-05 — traceability populated by roadmapper*
