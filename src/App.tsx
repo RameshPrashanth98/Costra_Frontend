@@ -1,4 +1,6 @@
-// src/App.tsx — temporary stub, replaced in Task 5
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+
 export default function App() {
-  return <div>Loading…</div>;
+  return <RouterProvider router={router} />;
 }
