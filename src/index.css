@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "./tokens/index.css";
+
+/* Mobile-web baseline — prevents iOS 300ms tap delay, pull-to-refresh, rubberband. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  touch-action: manipulation;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Nunito Sans wiring deferred to Phase 2 */
+}
+
+#root {
+  min-height: 100dvh;
+}
