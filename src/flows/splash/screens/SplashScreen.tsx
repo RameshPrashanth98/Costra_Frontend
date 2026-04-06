@@ -26,37 +26,17 @@ function fadeUp(delay: number): React.CSSProperties {
   };
 }
 
-// --- Logo SVG ---
+// --- Logo Mark (actual brand asset) ---
 function LogoMark() {
   return (
-    <svg
-      width="128"
-      height="128"
-      viewBox="0 0 128 128"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <img
+      src="/logos/costra-icon.png"
+      alt=""
+      width={128}
+      height={128}
+      style={{ borderRadius: 16 }}
       aria-hidden="true"
-    >
-      {/* Outer dark circle */}
-      <circle cx="64" cy="64" r="64" fill="#0A0A0B" />
-      <circle cx="64" cy="64" r="63.5" stroke="#1C1C1F" strokeWidth="1" />
-      {/* Inner lime disc */}
-      <circle cx="64" cy="64" r="44" fill="#C8FF00" />
-      {/* Blocky square "C" mark — three-sided square, right side open */}
-      {/*
-        The C occupies roughly 60% of the 88px disc diameter = ~52px.
-        Centered: top-left at (64 - 26, 64 - 26) = (38, 38)
-        Stroke is 7px; corners are square (butt caps, miter joins)
-      */}
-      <path
-        d="M82 42 H46 V86 H82"
-        stroke="#050505"
-        strokeWidth="7"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-        fill="none"
-      />
-    </svg>
+    />
   );
 }
 
