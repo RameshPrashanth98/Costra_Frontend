@@ -88,7 +88,7 @@ function BottomNav({ hide }: BottomNavProps) {
 // ─── App Layout ──────────────────────────────────────────────────────────────
 export default function AppLayout() {
   const location = useLocation();
-  const hideNav = location.pathname.includes('voice-entry');
+  const hideNav = location.pathname.includes('voice-entry') || location.pathname.includes('expense-added') || location.pathname.includes('income-added');
 
   return (
     <div

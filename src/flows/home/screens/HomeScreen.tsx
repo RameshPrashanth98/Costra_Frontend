@@ -281,12 +281,14 @@ export default function HomeScreen() {
         <div className="flex items-center" style={{ padding: '0 20px', marginTop: 24, gap: 10, ...fadeUp(800) }}>
           <button
             type="button"
+            onClick={() => void navigate('/app/track?tab=expense')}
             style={{ flex: 1, background: '#C8FF00', color: '#050505', borderRadius: 14, padding: 14, border: 'none', cursor: 'pointer', fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.85rem' }}
           >
             + Add Expense
           </button>
           <button
             type="button"
+            onClick={() => void navigate('/app/track?tab=income')}
             style={{ flex: 1, background: 'transparent', color: '#FAFAFA', borderRadius: 14, padding: 14, border: '1px solid #27272A', cursor: 'pointer', fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.85rem' }}
           >
             + Add Income

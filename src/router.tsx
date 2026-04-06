@@ -20,6 +20,8 @@ const NotificationsScreen = lazy(() => import('@/flows/notifications/screens/Not
 const AllTransactionsScreen = lazy(() => import('@/flows/transactions/screens/AllTransactionsScreen'));
 const TransactionDetailsScreen = lazy(() => import('@/flows/transactions/screens/TransactionDetailsScreen'));
 const VoiceEntryScreen = lazy(() => import('@/flows/voice-entry/screens/VoiceEntryScreen'));
+const ExpenseAddedScreen = lazy(() => import('@/flows/track/screens/ExpenseAddedScreen'));
+const IncomeAddedScreen = lazy(() => import('@/flows/track/screens/IncomeAddedScreen'));
 
 const NotFound = lazy(() => import('@/components/NotFound'));
 
@@ -55,6 +57,8 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: withSuspense(<HomeScreen />) },
       { path: 'track', element: withSuspense(<TrackScreen />) },
+      { path: 'track/expense-added', element: withSuspense(<ExpenseAddedScreen />) },
+      { path: 'track/income-added', element: withSuspense(<IncomeAddedScreen />) },
       { path: 'wallet', element: withSuspense(<WalletScreen />) },
       { path: 'insights', element: withSuspense(<InsightsScreen />) },
       { path: 'profile', element: withSuspense(<ProfileScreen />) },
