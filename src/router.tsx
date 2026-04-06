@@ -15,6 +15,7 @@ const TrackScreen = lazy(() => import('@/flows/track/screens/TrackScreen'));
 const WalletScreen = lazy(() => import('@/flows/wallet/screens/WalletScreen'));
 const InsightsScreen = lazy(() => import('@/flows/insights/screens/InsightsScreen'));
 const ProfileScreen = lazy(() => import('@/flows/profile/screens/ProfileScreen'));
+const SettingsScreen = lazy(() => import('@/flows/profile/screens/SettingsScreen'));
 
 const NotificationsScreen = lazy(() => import('@/flows/notifications/screens/NotificationsScreen'));
 const AllTransactionsScreen = lazy(() => import('@/flows/transactions/screens/AllTransactionsScreen'));
@@ -62,6 +63,7 @@ export const router = createBrowserRouter([
       { path: 'wallet', element: withSuspense(<WalletScreen />) },
       { path: 'insights', element: withSuspense(<InsightsScreen />) },
       { path: 'profile', element: withSuspense(<ProfileScreen />) },
+      { path: 'profile/settings', element: withSuspense(<SettingsScreen />) },
       { path: 'notifications', element: withSuspense(<NotificationsScreen />) },
       { path: 'transactions', element: withSuspense(<AllTransactionsScreen />) },
       { path: 'transaction/:id', element: withSuspense(<TransactionDetailsScreen />) },
