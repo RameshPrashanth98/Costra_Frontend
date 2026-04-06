@@ -39,24 +39,35 @@ src/
     login/screens/        # OTP sign-in screen
     register/screens/     # 4-step registration flow
     welcome/screens/      # Welcome screen
-    home/screens/         # Dashboard (placeholder)
+    home/screens/         # Dashboard with budget, spending, transactions
+    notifications/screens/ # Notifications with filter chips
+    transactions/screens/ # All Transactions list + Transaction Details
+    voice-entry/screens/  # Voice expense entry with live transcript
     track/screens/        # Expense tracking (placeholder)
     wallet/screens/       # Wallet management (placeholder)
     insights/screens/     # Spending analytics (placeholder)
     profile/screens/      # User profile (placeholder)
   layouts/
     AuthLayout.tsx        # Auth flow wrapper (393px max-width)
-    AppLayout.tsx         # App flow wrapper with bottom nav
+    AppLayout.tsx         # App flow wrapper with BottomNav (5 tabs, lime active)
   tokens/
     index.css             # Design tokens (Phase 2)
 ```
 
 ## Screens Implemented
 
+### Auth Flow
 - **Splash** — Animated brand reveal, auto-navigates to onboarding
 - **Onboarding** — 4-slide carousel with hero images, skip/continue flow
 - **Login** — OTP sign-in with +94 country code, phone input, Send OTP
 - **Register** — 4-step flow: name + phone, OTP verification, economic profile, account ready
+
+### App Flow
+- **Home** — Dashboard with money-left hero card, today's spending categories, alerts, spending breakdown, recent transactions, wallet cards, action bar (Add Expense / Add Income / Voice)
+- **Notifications** — Filter chips (All/Alerts/Reminders/Income), today/yesterday grouped cards with colored borders
+- **All Transactions** — Search bar, category filter chips, date-grouped transaction list
+- **Transaction Details** — Expense detail with amount, category, payment method, notes, insight banner, edit/delete actions
+- **Voice Entry** — Animated mic with pulse rings, waveform visualization, live transcript, parsed result card
 
 ## Design System
 
