@@ -5,7 +5,7 @@ milestone_name: milestone
 status: completed
 stopped_at: Completed 01-scaffold-01-01-PLAN.md
 last_updated: "2026-04-05T18:02:00.033Z"
-last_activity: 2026-04-06 — Quick task 260406-12i: 4-slide onboarding carousel with HIFI fidelity and animations
+last_activity: 2026-04-06 — Quick task 260406-k4g: Home screen flow — AppLayout rewrite, 5 HIFI screens, full navigation wiring
 progress:
   total_phases: 7
   completed_phases: 1
@@ -84,9 +84,10 @@ None.
 |----|-------------|------|---------|---------------|
 | 260406-05v | Splash screen HIFI fidelity + animations | 2026-04-06 | c00f2d8, 7af89be | index.html, SplashScreen.tsx |
 | 260406-12i | 4-slide onboarding carousel HIFI + animations | 2026-04-06 | 4a9ffa7, fbb71bd, 3ebe953 | AuthLayout.tsx, SplashScreen.tsx, OnboardingScreen.tsx, public/hifi-heroes/ (4 PNGs) |
+| 260406-k4g | Home screen flow — AppLayout + 5 HIFI screens + navigation | 2026-04-06 | 20f3d2e, 0b653b5, 1a4945b, ab6bba6, 72ddf7f | AppLayout.tsx, router.tsx, HomeScreen.tsx, NotificationsScreen.tsx, TransactionDetailsScreen.tsx, AllTransactionsScreen.tsx, VoiceEntryScreen.tsx |
 
 ## Session Continuity
 
 Last session: 2026-04-06T00:00:00Z
-Stopped at: Completed quick task 260406-12i (Onboarding carousel HIFI)
+Stopped at: Completed quick task 260406-k4g (Home screen flow with 5 HIFI screens)
 Resume file: None
