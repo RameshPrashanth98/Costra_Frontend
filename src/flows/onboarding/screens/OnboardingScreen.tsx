@@ -59,32 +59,18 @@ function StatusBar() {
   );
 }
 
-// ─── Costra brand mark (Slide 1) ─────────────────────────────────────────────
+// ─── Costra brand mark (actual brand asset) ─────────────────────────────────
 function CostraBrand() {
   return (
     <div className="flex items-center" style={{ gap: 10 }}>
-      <div
-        style={{
-          width: 32,
-          height: 32,
-          background: '#C8FF00',
-          borderRadius: 4,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-          <path
-            d="M14 3 H4 V15 H14"
-            stroke="#050505"
-            strokeWidth="2.5"
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            fill="none"
-          />
-        </svg>
-      </div>
+      <img
+        src="/logos/costra-icon.png"
+        alt=""
+        width={32}
+        height={32}
+        style={{ borderRadius: 4 }}
+        aria-hidden="true"
+      />
       <span
         style={{
           fontFamily: "'Outfit', sans-serif",

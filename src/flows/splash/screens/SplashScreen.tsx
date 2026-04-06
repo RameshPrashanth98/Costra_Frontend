@@ -40,27 +40,17 @@ function LogoMark() {
   );
 }
 
-// --- Small wordmark "C" icon ---
+// --- Small wordmark "C" icon (actual brand asset) ---
 function WordmarkIcon() {
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <img
+      src="/logos/costra-icon.png"
+      alt=""
+      width={14}
+      height={14}
+      style={{ borderRadius: 3 }}
       aria-hidden="true"
-    >
-      <rect width="14" height="14" rx="3" fill="#C8FF00" />
-      <path
-        d="M10.5 3.5 H3.5 V10.5 H10.5"
-        stroke="#050505"
-        strokeWidth="2"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-        fill="none"
-      />
-    </svg>
+    />
   );
 }
 
