@@ -364,12 +364,12 @@ export default function OnboardingScreen() {
     if (index < 3) {
       setIndex((i) => i + 1);
     } else {
-      void navigate('/register');
+      void navigate('/login');
     }
   };
 
   const skip = () => {
-    void navigate('/register');
+    void navigate('/login');
   };
 
   // SLIDES is a fixed-length array; index is always 0-3
