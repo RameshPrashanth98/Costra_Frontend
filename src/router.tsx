@@ -16,6 +16,11 @@ const WalletScreen = lazy(() => import('@/flows/wallet/screens/WalletScreen'));
 const InsightsScreen = lazy(() => import('@/flows/insights/screens/InsightsScreen'));
 const ProfileScreen = lazy(() => import('@/flows/profile/screens/ProfileScreen'));
 
+const NotificationsScreen = lazy(() => import('@/flows/notifications/screens/NotificationsScreen'));
+const AllTransactionsScreen = lazy(() => import('@/flows/transactions/screens/AllTransactionsScreen'));
+const TransactionDetailsScreen = lazy(() => import('@/flows/transactions/screens/TransactionDetailsScreen'));
+const VoiceEntryScreen = lazy(() => import('@/flows/voice-entry/screens/VoiceEntryScreen'));
+
 const NotFound = lazy(() => import('@/components/NotFound'));
 
 function withSuspense(node: ReactNode) {
@@ -53,6 +58,10 @@ export const router = createBrowserRouter([
       { path: 'wallet', element: withSuspense(<WalletScreen />) },
       { path: 'insights', element: withSuspense(<InsightsScreen />) },
       { path: 'profile', element: withSuspense(<ProfileScreen />) },
+      { path: 'notifications', element: withSuspense(<NotificationsScreen />) },
+      { path: 'transactions', element: withSuspense(<AllTransactionsScreen />) },
+      { path: 'transaction/:id', element: withSuspense(<TransactionDetailsScreen />) },
+      { path: 'voice-entry', element: withSuspense(<VoiceEntryScreen />) },
     ],
   },
   { path: '*', element: withSuspense(<NotFound />) },
