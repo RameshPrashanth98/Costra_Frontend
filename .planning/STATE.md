@@ -5,7 +5,7 @@ milestone_name: milestone
 status: completed
 stopped_at: Completed 01-scaffold-01-01-PLAN.md
 last_updated: "2026-04-07T00:00:00.000Z"
-last_activity: 2026-04-07 — Quick task 260407-ot4: Splash screen timeout increased from 2800ms to 25000ms
+last_activity: 2026-04-07 — Quick task 260407-pdp: Splash screen timeout set from 25000ms to 5000ms
 progress:
   total_phases: 7
   completed_phases: 1
@@ -88,9 +88,10 @@ None.
 | 260406-o83 | Track flow — Add Transaction form + 2 success screens + navigation | 2026-04-06 | 9e3f220, ab4b641 | TrackScreen.tsx, ExpenseAddedScreen.tsx, IncomeAddedScreen.tsx, HomeScreen.tsx, AppLayout.tsx, router.tsx |
 | 260406-pd5 | Insights screen — Today/This Week tabs, spending analytics, progress bars | 2026-04-06 | c3a31ee | InsightsScreen.tsx |
 | 260407-ot4 | Splash screen timeout increased from 2800ms to 25000ms | 2026-04-07 | cedb7a7 | SplashScreen.tsx |
+| 260407-pdp | Splash screen timeout set to 5000ms (5 seconds) | 2026-04-07 | 393f2b5 | SplashScreen.tsx |
 
 ## Session Continuity
 
 Last session: 2026-04-07T00:00:00Z
-Stopped at: Completed quick task 260407-ot4 — splash screen timeout set to 25 seconds.
+Stopped at: Completed quick task 260407-pdp — splash screen timeout set to 5 seconds.
 Resume file: None
