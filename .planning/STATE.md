@@ -4,8 +4,8 @@ milestone: v1.0
 milestone_name: milestone
 status: completed
 stopped_at: Completed 01-scaffold-01-01-PLAN.md
-last_updated: "2026-04-06T13:50:56.844Z"
-last_activity: 2026-04-06 — Quick task 260406-pd5: Insights screen — Today/This Week tabs, spending analytics with animated progress bars
+last_updated: "2026-04-07T00:00:00.000Z"
+last_activity: 2026-04-07 — Quick task 260407-ot4: Splash screen timeout increased from 2800ms to 25000ms
 progress:
   total_phases: 7
   completed_phases: 1
@@ -87,9 +87,10 @@ None.
 | 260406-k4g | Home screen flow — AppLayout + 5 HIFI screens + navigation | 2026-04-06 | 20f3d2e, 0b653b5, 1a4945b, ab6bba6, 72ddf7f | AppLayout.tsx, router.tsx, HomeScreen.tsx, NotificationsScreen.tsx, TransactionDetailsScreen.tsx, AllTransactionsScreen.tsx, VoiceEntryScreen.tsx |
 | 260406-o83 | Track flow — Add Transaction form + 2 success screens + navigation | 2026-04-06 | 9e3f220, ab4b641 | TrackScreen.tsx, ExpenseAddedScreen.tsx, IncomeAddedScreen.tsx, HomeScreen.tsx, AppLayout.tsx, router.tsx |
 | 260406-pd5 | Insights screen — Today/This Week tabs, spending analytics, progress bars | 2026-04-06 | c3a31ee | InsightsScreen.tsx |
+| 260407-ot4 | Splash screen timeout increased from 2800ms to 25000ms | 2026-04-07 | cedb7a7 | SplashScreen.tsx |
 
 ## Session Continuity
 
-Last session: 2026-04-06T13:50:56Z
-Stopped at: Paused after 5 quick tasks — 14 HIFI screens shipped (Splash, Onboarding, Home+5, Track+3, Insights). Wallet and Profile placeholders remain. Phase 2 (Design Tokens) not started.
+Last session: 2026-04-07T00:00:00Z
+Stopped at: Completed quick task 260407-ot4 — splash screen timeout set to 25 seconds.
 Resume file: None
