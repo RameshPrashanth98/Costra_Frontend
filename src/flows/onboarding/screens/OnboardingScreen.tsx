@@ -59,33 +59,6 @@ function StatusBar() {
   );
 }
 
-// ─── Costra brand mark (actual brand asset) ─────────────────────────────────
-function CostraBrand() {
-  return (
-    <div className="flex items-center" style={{ gap: 10 }}>
-      <img
-        src="/logos/costra-icon.png"
-        alt=""
-        width={32}
-        height={32}
-        style={{ borderRadius: 4 }}
-        aria-hidden="true"
-      />
-      <span
-        style={{
-          fontFamily: "'Outfit', sans-serif",
-          fontWeight: 900,
-          fontSize: '0.95rem',
-          letterSpacing: '0.15em',
-          color: '#FAFAFA',
-        }}
-      >
-        COSTRA
-      </span>
-    </div>
-  );
-}
-
 // ─── Slide data types ────────────────────────────────────────────────────────
 type BulletsCard = {
   type: 'bullets';
@@ -383,11 +356,40 @@ export default function OnboardingScreen() {
           className="flex flex-1 flex-col"
           style={{ padding: '0 24px', overflow: 'hidden' }}
         >
-          {/* Brand or eyebrow */}
-          <div style={{ marginBottom: 16, ...fadeUp(0) }}>
-            {slide.hasLogo ? (
-              <CostraBrand />
-            ) : slide.eyebrow ? (
+          {/* Brand + eyebrow */}
+          <div style={{ marginBottom: 20, ...fadeUp(0) }}>
+            {slide.hasLogo && (
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  paddingTop: 16,
+                }}
+              >
+                <img
+                  src="/logos/costra-icon.png"
+                  alt=""
+                  width={48}
+                  height={48}
+                  style={{ borderRadius: 6 }}
+                  aria-hidden="true"
+                />
+                <span
+                  style={{
+                    fontFamily: "'Outfit', sans-serif",
+                    fontWeight: 900,
+                    fontSize: '0.95rem',
+                    letterSpacing: '0.15em',
+                    color: '#FAFAFA',
+                    marginTop: 10,
+                  }}
+                >
+                  COSTRA
+                </span>
+              </div>
+            )}
+            {slide.eyebrow && (
               <p
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
@@ -396,15 +398,17 @@ export default function OnboardingScreen() {
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
                   fontWeight: 500,
+                  textAlign: slide.hasLogo ? 'center' : undefined,
+                  marginTop: slide.hasLogo ? 14 : 0,
                 }}
               >
                 {slide.eyebrow}
               </p>
-            ) : null}
+            )}
           </div>
 
           {/* Title */}
-          <div style={{ marginBottom: 10, ...fadeUp(80) }}>
+          <div style={{ marginBottom: 12, ...fadeUp(80) }}>
             <h1
               style={{
                 fontFamily: "'Outfit', sans-serif",
@@ -419,7 +423,7 @@ export default function OnboardingScreen() {
           </div>
 
           {/* Body */}
-          <div style={{ marginBottom: 16, ...fadeUp(160) }}>
+          <div style={{ marginBottom: 18, ...fadeUp(160) }}>
             <p
               style={{
                 fontFamily: "'Outfit', sans-serif",
@@ -434,7 +438,7 @@ export default function OnboardingScreen() {
           </div>
 
           {/* Content card */}
-          <div style={{ marginBottom: slide.supportingText ? 14 : 14, ...fadeUp(240) }}>
+          <div style={{ marginBottom: 16, ...fadeUp(240) }}>
             <SlideCard card={slide.card} />
           </div>
 
@@ -456,16 +460,15 @@ export default function OnboardingScreen() {
           )}
 
           {/* Hero image */}
-          <div style={{ ...fadeUp(320), flex: 1, minHeight: 120 }}>
+          <div style={{ ...fadeUp(320), marginTop: 'auto' }}>
             <div
               style={{
                 width: '100%',
-                height: '100%',
-                minHeight: 120,
+                height: 140,
                 borderRadius: 16,
                 overflow: 'hidden',
                 backgroundImage: `url(${slide.hero})`,
-                backgroundSize: '100% auto',
+                backgroundSize: 'cover',
                 backgroundPosition: slide.heroPosition ?? 'center 64%',
                 backgroundRepeat: 'no-repeat',
               }}
