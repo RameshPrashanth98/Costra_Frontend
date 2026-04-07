@@ -89,9 +89,10 @@ None.
 | 260406-pd5 | Insights screen — Today/This Week tabs, spending analytics, progress bars | 2026-04-06 | c3a31ee | InsightsScreen.tsx |
 | 260407-ot4 | Splash screen timeout increased from 2800ms to 25000ms | 2026-04-07 | cedb7a7 | SplashScreen.tsx |
 | 260407-pdp | Splash screen timeout set to 5000ms (5 seconds) | 2026-04-07 | 393f2b5 | SplashScreen.tsx |
+| 260407-pik | Onboarding slide 1 HIFI rebuild — centered stacked logo, visible eyebrow, fixed hero | 2026-04-07 | 28518a3 | OnboardingScreen.tsx |
 
 ## Session Continuity
 
-Last session: 2026-04-07T00:00:00Z
-Stopped at: Completed quick task 260407-pdp — splash screen timeout set to 5 seconds.
+Last session: 2026-04-07T12:57:13Z
+Stopped at: Quick task 260407-pik — paused at checkpoint:human-verify after Task 1 committed (28518a3).
 Resume file: None
