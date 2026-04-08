@@ -91,9 +91,10 @@ None.
 | 260407-pdp | Splash screen timeout set to 5000ms (5 seconds) | 2026-04-07 | 393f2b5 | SplashScreen.tsx |
 | 260407-pik | Onboarding slide 1 HIFI rebuild — centered stacked logo, visible eyebrow, fixed hero | 2026-04-07 | 28518a3 | OnboardingScreen.tsx |
 | 260408-b5i | Login OTP verification screen — 4-digit input, countdown timer, auth flow wiring | 2026-04-08 | 9809540, f8edd67 | LoginOtpScreen.tsx, router.tsx, LoginScreen.tsx, main.tsx |
+| 260408-bwy | Change all currency from Indian Rupee (₹) to Sri Lankan Rs. across the app | 2026-04-08 | 972ef2d | HomeScreen.tsx, AllTransactionsScreen.tsx, TransactionDetailsScreen.tsx, VoiceEntryScreen.tsx, NotificationsScreen.tsx, ProfileScreen.tsx, SettingsScreen.tsx |
 
 ## Session Continuity
 
-Last session: 2026-04-08T02:38:06Z
-Stopped at: Completed 260408-b5i — Login OTP verification screen
+Last session: 2026-04-08T03:10:00Z
+Stopped at: Completed 260408-bwy — Currency changed to Sri Lankan Rs.
 Resume file: None
