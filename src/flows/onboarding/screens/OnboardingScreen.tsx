@@ -167,7 +167,7 @@ const SLIDES: SlideData[] = [
     supportingText:
       'Start simple, stay consistent, and let the app carry more of the financial mental load.',
     hero: '/hifi-heroes/onboarding-4.png',
-    heroPosition: 'center 64%',
+    heroPosition: 'center center',
     cta: 'Get Started',
   },
 ];
