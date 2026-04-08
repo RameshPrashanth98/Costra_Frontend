@@ -244,7 +244,7 @@ function QuickAmounts({
             transition: 'all 0.15s ease',
           }}
         >
-          {'\u20B9'}{amt}
+          {'Rs.'}{amt}
         </button>
       ))}
     </div>
@@ -319,7 +319,7 @@ export default function TrackScreen() {
               marginTop: 8,
             }}
           >
-            {'\u20B9'}{amount}
+            {'Rs.'}{amount}
           </p>
           <div
             style={{

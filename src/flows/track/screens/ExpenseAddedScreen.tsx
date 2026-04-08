@@ -138,7 +138,7 @@ export default function ExpenseAddedScreen() {
             ...fadeUp(350),
           }}
         >
-          <SummaryRow label="Amount" value={'\u20B9180'} />
+          <SummaryRow label="Amount" value={'Rs.180'} />
           <SummaryRow
             label="Category"
             value="Food"
@@ -172,7 +172,7 @@ export default function ExpenseAddedScreen() {
               lineHeight: 1.5,
             }}
           >
-            You've spent 68% of today's food budget. {'\u20B9'}400 remaining.
+            You've spent 68% of today's food budget. {'Rs.'}400 remaining.
           </p>
         </div>
 

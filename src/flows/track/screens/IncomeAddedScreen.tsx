@@ -138,7 +138,7 @@ export default function IncomeAddedScreen() {
             ...fadeUp(350),
           }}
         >
-          <SummaryRow label="Amount" value={'\u20B925,000'} />
+          <SummaryRow label="Amount" value={'Rs.25,000'} />
           <SummaryRow label="Income Type" value="Salary" />
           <SummaryRow
             label="Source"
