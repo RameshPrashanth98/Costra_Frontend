@@ -128,7 +128,7 @@ const SLIDES: SlideData[] = [
     supportingText:
       'You always know today\'s balance, weekly burn, and when borrowing risk is getting closer.',
     hero: '/hifi-heroes/onboarding-2.png',
-    heroPosition: 'center 62%',
+    heroPosition: 'center center',
     cta: 'Next',
   },
   {
