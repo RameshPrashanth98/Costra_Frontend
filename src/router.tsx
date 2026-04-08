@@ -9,6 +9,7 @@ const WelcomeScreen = lazy(() => import('@/flows/welcome/screens/WelcomeScreen')
 const OnboardingScreen = lazy(() => import('@/flows/onboarding/screens/OnboardingScreen'));
 const RegisterScreen = lazy(() => import('@/flows/register/screens/RegisterScreen'));
 const LoginScreen = lazy(() => import('@/flows/login/screens/LoginScreen'));
+const LoginOtpScreen = lazy(() => import('@/flows/login/screens/LoginOtpScreen'));
 
 const HomeScreen = lazy(() => import('@/flows/home/screens/HomeScreen'));
 const TrackScreen = lazy(() => import('@/flows/track/screens/TrackScreen'));
@@ -50,6 +51,7 @@ export const router = createBrowserRouter([
       { path: 'onboarding', element: withSuspense(<OnboardingScreen />) },
       { path: 'register', element: withSuspense(<RegisterScreen />) },
       { path: 'login', element: withSuspense(<LoginScreen />) },
+      { path: 'login/verify-otp', element: withSuspense(<LoginOtpScreen />) },
     ],
   },
   {

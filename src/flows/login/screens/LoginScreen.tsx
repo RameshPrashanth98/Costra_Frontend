@@ -93,7 +93,7 @@ export default function LoginScreen() {
 
   const handleSendOtp = () => {
     if (phone.trim()) {
-      void navigate('/app');
+      void navigate('/login/verify-otp');
     }
   };
 
