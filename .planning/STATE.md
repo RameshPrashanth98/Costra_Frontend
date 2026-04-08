@@ -5,7 +5,7 @@ milestone_name: milestone
 status: completed
 stopped_at: Completed 01-scaffold-01-01-PLAN.md
 last_updated: "2026-04-07T00:00:00.000Z"
-last_activity: 2026-04-07 — Quick task 260407-pdp: Splash screen timeout set from 25000ms to 5000ms
+last_activity: 2026-04-08 — Quick task 260408-b5i: Login OTP verification screen with 4-digit input and auth flow wiring
 progress:
   total_phases: 7
   completed_phases: 1
@@ -90,9 +90,10 @@ None.
 | 260407-ot4 | Splash screen timeout increased from 2800ms to 25000ms | 2026-04-07 | cedb7a7 | SplashScreen.tsx |
 | 260407-pdp | Splash screen timeout set to 5000ms (5 seconds) | 2026-04-07 | 393f2b5 | SplashScreen.tsx |
 | 260407-pik | Onboarding slide 1 HIFI rebuild — centered stacked logo, visible eyebrow, fixed hero | 2026-04-07 | 28518a3 | OnboardingScreen.tsx |
+| 260408-b5i | Login OTP verification screen — 4-digit input, countdown timer, auth flow wiring | 2026-04-08 | 9809540, f8edd67 | LoginOtpScreen.tsx, router.tsx, LoginScreen.tsx, main.tsx |
 
 ## Session Continuity
 
-Last session: 2026-04-07T12:57:13Z
-Stopped at: Quick task 260407-pik — paused at checkpoint:human-verify after Task 1 committed (28518a3).
+Last session: 2026-04-08T02:38:06Z
+Stopped at: Completed 260408-b5i — Login OTP verification screen
 Resume file: None
