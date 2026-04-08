@@ -177,7 +177,7 @@ export default function VoiceEntryScreen() {
           {/* Amount row */}
           <div className="flex items-center justify-between" style={{ paddingBottom: 12, borderBottom: '1px solid #1C1C1F' }}>
             <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.1em' }}>AMOUNT</span>
-            <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA' }}>₹770</span>
+            <span style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA' }}>Rs.770</span>
           </div>
           {/* Type row */}
           <div className="flex items-center justify-between" style={{ padding: '12px 0', borderBottom: '1px solid #1C1C1F' }}>

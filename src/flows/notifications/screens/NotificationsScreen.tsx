@@ -142,7 +142,7 @@ export default function NotificationsScreen() {
               time="5h ago"
             />
             <NotifCard
-              title="Salary of ₹45,000 received to HDFC account"
+              title="Salary of Rs.45,000 received to Commercial Bank account"
               time="8h ago"
               borderColor="#3B82F6"
             />

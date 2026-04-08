@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   ChevronLeft,
   ChevronRight,
-  IndianRupee,
+  Coins,
   Globe,
   Moon,
   CalendarDays,
@@ -231,7 +231,7 @@ export default function SettingsScreen() {
         {/* ─── General Settings ──────────────────────────────────────── */}
         <div style={{ padding: '0 20px' }}>
           <SectionTitle title="General Settings" delay={150} />
-          <SettingsRow icon={IndianRupee} label="Currency" value="LKR (Rs.)" delay={170} isFirst isLast={false} />
+          <SettingsRow icon={Coins} label="Currency" value="LKR (Rs.)" delay={170} isFirst isLast={false} />
           <SettingsRow icon={Globe} label="Language" value="English" delay={190} />
           <SettingsRow
             icon={Moon}

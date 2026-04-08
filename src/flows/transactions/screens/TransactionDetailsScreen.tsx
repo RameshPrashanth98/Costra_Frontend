@@ -80,7 +80,7 @@ export default function TransactionDetailsScreen() {
 
         {/* Amount */}
         <div className="flex justify-center" style={{ marginTop: 16, ...fadeUp(300) }}>
-          <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 900, fontSize: '2.6rem', color: '#FAFAFA', lineHeight: 1.1 }}>₹ 450.00</p>
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 900, fontSize: '2.6rem', color: '#FAFAFA', lineHeight: 1.1 }}>Rs. 450.00</p>
         </div>
 
         {/* Category */}
@@ -132,7 +132,7 @@ export default function TransactionDetailsScreen() {
           <div className="flex items-center" style={{ gap: 10 }}>
             <Lightbulb size={18} strokeWidth={1.5} color="#C8FF00" />
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 400, fontSize: '0.8rem', color: '#A1A1AA' }}>
-              This is ₹120 higher than your usual lunch spend
+              This is Rs.120 higher than your usual lunch spend
             </p>
           </div>
         </div>

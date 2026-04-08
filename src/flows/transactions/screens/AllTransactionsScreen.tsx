@@ -98,17 +98,17 @@ export default function AllTransactionsScreen() {
   const [search, setSearch] = useState('');
 
   const todayTransactions = [
-    { id: '1', name: 'Morning Coffee', category: 'Food', time: '8:30 AM', amount: '-₹45', Icon: Coffee },
-    { id: '2', name: 'Bus Fare', category: 'Transport', time: '9:15 AM', amount: '-₹25', Icon: Bus },
-    { id: '3', name: 'Amazon Order', category: 'Shopping', time: '11:45 AM', amount: '-₹300', Icon: ShoppingBag },
-    { id: '4', name: 'Electricity Bill', category: 'Bills', time: '2:00 PM', amount: '-₹850', Icon: Zap },
-    { id: '5', name: 'Grocery Store', category: 'Food', time: '4:30 PM', amount: '-₹150', Icon: Utensils },
+    { id: '1', name: 'Morning Coffee', category: 'Food', time: '8:30 AM', amount: '-Rs.45', Icon: Coffee },
+    { id: '2', name: 'Bus Fare', category: 'Transport', time: '9:15 AM', amount: '-Rs.25', Icon: Bus },
+    { id: '3', name: 'Amazon Order', category: 'Shopping', time: '11:45 AM', amount: '-Rs.300', Icon: ShoppingBag },
+    { id: '4', name: 'Electricity Bill', category: 'Bills', time: '2:00 PM', amount: '-Rs.850', Icon: Zap },
+    { id: '5', name: 'Grocery Store', category: 'Food', time: '4:30 PM', amount: '-Rs.150', Icon: Utensils },
   ];
 
   const yesterdayTransactions = [
-    { id: '6', name: 'Lunch', category: 'Food', time: '12:30 PM', amount: '-₹450', Icon: Utensils },
-    { id: '7', name: 'Auto Rickshaw', category: 'Transport', time: '3:15 PM', amount: '-₹175', Icon: Bus },
-    { id: '8', name: 'Movie Tickets', category: 'Entertainment', time: '7:00 PM', amount: '-₹355', Icon: Music },
+    { id: '6', name: 'Lunch', category: 'Food', time: '12:30 PM', amount: '-Rs.450', Icon: Utensils },
+    { id: '7', name: 'Auto Rickshaw', category: 'Transport', time: '3:15 PM', amount: '-Rs.175', Icon: Bus },
+    { id: '8', name: 'Movie Tickets', category: 'Entertainment', time: '7:00 PM', amount: '-Rs.355', Icon: Music },
   ];
 
   return (
@@ -171,7 +171,7 @@ export default function AllTransactionsScreen() {
             <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.6rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
               Today, 26 Mar
             </p>
-            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 500, fontSize: '0.8rem', color: '#EF4444' }}>-₹1,370</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 500, fontSize: '0.8rem', color: '#EF4444' }}>-Rs.1,370</p>
           </div>
           <div style={{ marginTop: 4 }}>
             {todayTransactions.map((tx, i) => (
@@ -191,7 +191,7 @@ export default function AllTransactionsScreen() {
             <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.6rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
               Yesterday, 25 Mar
             </p>
-            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 500, fontSize: '0.8rem', color: '#EF4444' }}>-₹980</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 500, fontSize: '0.8rem', color: '#EF4444' }}>-Rs.980</p>
           </div>
           <div style={{ marginTop: 4 }}>
             {yesterdayTransactions.map((tx, i) => (

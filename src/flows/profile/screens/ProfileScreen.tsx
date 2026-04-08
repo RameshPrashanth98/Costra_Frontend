@@ -6,7 +6,7 @@ import {
   BadgeCheck,
   Wallet,
   Grid3X3,
-  IndianRupee,
+  Coins,
   Globe,
   Bell,
   CalendarDays,
@@ -303,7 +303,7 @@ export default function ProfileScreen() {
           <SectionHeader title="Financial Setup" delay={300} />
           <SectionRow icon={Wallet} label="Income Type" value="Monthly" delay={320} isFirst isLast={false} />
           <SectionRow icon={Grid3X3} label="Spending Categories" value="8 active" delay={340} />
-          <SectionRow icon={IndianRupee} label="Currency" value="SLRP (LKR)" delay={360} isLast />
+          <SectionRow icon={Coins} label="Currency" value="LKR (Rs.)" delay={360} isLast />
         </div>
 
         {/* ─── Preferences ───────────────────────────────────────────── */}

@@ -116,7 +116,7 @@ export default function HomeScreen() {
             </p>
             <div className="flex items-center" style={{ gap: 12, marginTop: 8 }}>
               <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 900, fontSize: '2.6rem', color: '#FAFAFA', lineHeight: 1.1 }}>
-                ₹1,245
+                Rs.1,245
               </p>
               <span style={{ background: 'rgba(34,197,94,0.12)', color: '#22C55E', borderRadius: 9999, padding: '4px 12px', fontFamily: "'JetBrains Mono', monospace", fontSize: '0.6rem', textTransform: 'uppercase', fontWeight: 600 }}>
                 Safe
@@ -125,12 +125,12 @@ export default function HomeScreen() {
             <div className="flex items-center" style={{ marginTop: 16, gap: 0 }}>
               <div>
                 <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Income</p>
-                <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#22C55E', marginTop: 2 }}>₹2,500</p>
+                <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#22C55E', marginTop: 2 }}>Rs.2,500</p>
               </div>
               <div style={{ width: 1, height: 32, background: '#1C1C1F', margin: '0 20px' }} />
               <div>
                 <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Spent</p>
-                <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#EF4444', marginTop: 2 }}>₹1,255</p>
+                <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#EF4444', marginTop: 2 }}>Rs.1,255</p>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function HomeScreen() {
         <div style={{ padding: '0 20px', marginTop: 24, ...fadeUp(300) }}>
           <div className="flex items-center justify-between" style={{ marginBottom: 14 }}>
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#FAFAFA' }}>Today's Spending</p>
-            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#FAFAFA' }}>₹1,255</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#FAFAFA' }}>Rs.1,255</p>
           </div>
           <div className="flex" style={{ gap: 10, overflowX: 'auto', paddingBottom: 4 }}>
             {/* Food */}
@@ -149,7 +149,7 @@ export default function HomeScreen() {
                 <Utensils size={18} strokeWidth={1.5} color="#F59E0B" />
               </div>
               <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#A1A1AA', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Food</p>
-              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>₹580</p>
+              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>Rs.580</p>
             </div>
             {/* Transport */}
             <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, minWidth: 120, flexShrink: 0 }}>
@@ -157,7 +157,7 @@ export default function HomeScreen() {
                 <Bus size={18} strokeWidth={1.5} color="#3B82F6" />
               </div>
               <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#A1A1AA', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Transport</p>
-              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>₹375</p>
+              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>Rs.375</p>
             </div>
             {/* Shopping */}
             <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, minWidth: 120, flexShrink: 0 }}>
@@ -165,7 +165,7 @@ export default function HomeScreen() {
                 <ShoppingBag size={18} strokeWidth={1.5} color="#A855F7" />
               </div>
               <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#A1A1AA', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Shopping</p>
-              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>₹300</p>
+              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>Rs.300</p>
             </div>
           </div>
         </div>
@@ -199,9 +199,9 @@ export default function HomeScreen() {
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {[
-              { label: 'Tea & Snacks x4', amount: '₹180' },
-              { label: 'Auto Rickshaw x2', amount: '₹175' },
-              { label: 'Online Shopping', amount: '₹300' },
+              { label: 'Tea & Snacks x4', amount: 'Rs.180' },
+              { label: 'Auto Rickshaw x2', amount: 'Rs.175' },
+              { label: 'Online Shopping', amount: 'Rs.300' },
             ].map(({ label, amount }) => (
               <div key={label} className="flex items-center justify-between">
                 <div className="flex items-center" style={{ gap: 10 }}>
@@ -228,9 +228,9 @@ export default function HomeScreen() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {[
-              { id: '1', name: 'Morning Coffee', category: 'Food', time: '8:30 AM', amount: '-₹45', icon: Coffee },
-              { id: '2', name: 'Bus Fare', category: 'Transport', time: '9:15 AM', amount: '-₹25', icon: Bus },
-              { id: '3', name: 'Amazon Order', category: 'Shopping', time: '11:45 AM', amount: '-₹300', icon: ShoppingBag },
+              { id: '1', name: 'Morning Coffee', category: 'Food', time: '8:30 AM', amount: '-Rs.45', icon: Coffee },
+              { id: '2', name: 'Bus Fare', category: 'Transport', time: '9:15 AM', amount: '-Rs.25', icon: Bus },
+              { id: '3', name: 'Amazon Order', category: 'Shopping', time: '11:45 AM', amount: '-Rs.300', icon: ShoppingBag },
             ].map(({ id, name, category, time, amount, icon: Icon }) => (
               <button
                 key={id}
@@ -266,13 +266,13 @@ export default function HomeScreen() {
             <div style={{ flex: 1, background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16 }}>
               <Wallet size={20} strokeWidth={1.5} color="#C8FF00" />
               <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#A1A1AA', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 10 }}>Cash</p>
-              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '1rem', color: '#FAFAFA', marginTop: 4 }}>₹2,450</p>
+              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '1rem', color: '#FAFAFA', marginTop: 4 }}>Rs.2,450</p>
             </div>
             {/* Bank */}
             <div style={{ flex: 1, background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16 }}>
               <CreditCard size={20} strokeWidth={1.5} color="#C8FF00" />
               <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.55rem', color: '#A1A1AA', textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 10 }}>Bank</p>
-              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '1rem', color: '#FAFAFA', marginTop: 4 }}>₹18,750</p>
+              <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '1rem', color: '#FAFAFA', marginTop: 4 }}>Rs.18,750</p>
             </div>
           </div>
         </div>
