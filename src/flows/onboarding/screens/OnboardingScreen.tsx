@@ -109,7 +109,7 @@ const SLIDES: SlideData[] = [
       ],
     },
     hero: '/hifi-heroes/onboarding-1.png',
-    heroPosition: 'center 64%',
+    heroPosition: 'center center',
     cta: 'Continue',
     showSkip: true,
   },
@@ -338,13 +338,16 @@ export default function OnboardingScreen() {
     <>
       <style>{KEYFRAMES}</style>
 
-      {/* Full screen dark bg */}
+      {/* Full screen dark bg — uses height not min-height; AuthLayout handles viewport */}
       <div
-        className="flex flex-col min-h-[100dvh]"
         style={{
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100dvh',
           background: '#050505',
           paddingTop: 'env(safe-area-inset-top)',
           paddingBottom: 'max(env(safe-area-inset-bottom), 16px)',
+          overflow: 'hidden',
         }}
       >
         {/* Status bar */}
@@ -353,43 +356,52 @@ export default function OnboardingScreen() {
         {/* Slide content — keyed on index to re-trigger animations */}
         <div
           key={index}
-          className="flex flex-1 flex-col"
-          style={{ padding: '0 24px', overflow: 'hidden' }}
+          style={{
+            flex: 1,
+            minHeight: 0,
+            overflowY: 'auto',
+            padding: '0 24px',
+            WebkitOverflowScrolling: 'touch',
+          }}
         >
-          {/* Brand + eyebrow */}
-          <div style={{ marginBottom: 20, ...fadeUp(0) }}>
-            {slide.hasLogo && (
-              <div
+          {/* Brand logo (slide 1 only) */}
+          {slide.hasLogo && (
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                paddingTop: 24,
+                paddingBottom: 32,
+                ...fadeUp(0),
+              }}
+            >
+              <img
+                src="/logos/costra-icon.png"
+                alt=""
+                width={48}
+                height={48}
+                style={{ borderRadius: 6 }}
+                aria-hidden="true"
+              />
+              <span
                 style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  paddingTop: 16,
+                  fontFamily: "'Outfit', sans-serif",
+                  fontWeight: 900,
+                  fontSize: '0.95rem',
+                  letterSpacing: '0.15em',
+                  color: '#FAFAFA',
+                  marginTop: 10,
                 }}
               >
-                <img
-                  src="/logos/costra-icon.png"
-                  alt=""
-                  width={48}
-                  height={48}
-                  style={{ borderRadius: 6 }}
-                  aria-hidden="true"
-                />
-                <span
-                  style={{
-                    fontFamily: "'Outfit', sans-serif",
-                    fontWeight: 900,
-                    fontSize: '0.95rem',
-                    letterSpacing: '0.15em',
-                    color: '#FAFAFA',
-                    marginTop: 10,
-                  }}
-                >
-                  COSTRA
-                </span>
-              </div>
-            )}
-            {slide.eyebrow && (
+                COSTRA
+              </span>
+            </div>
+          )}
+
+          {/* Eyebrow */}
+          {slide.eyebrow && (
+            <div style={{ marginBottom: 12, ...fadeUp(slide.hasLogo ? 60 : 0) }}>
               <p
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
@@ -398,17 +410,15 @@ export default function OnboardingScreen() {
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
                   fontWeight: 500,
-                  textAlign: slide.hasLogo ? 'center' : undefined,
-                  marginTop: slide.hasLogo ? 14 : 0,
                 }}
               >
                 {slide.eyebrow}
               </p>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* Title */}
-          <div style={{ marginBottom: 12, ...fadeUp(80) }}>
+          <div style={{ marginBottom: 10, ...fadeUp(slide.hasLogo ? 120 : 80) }}>
             <h1
               style={{
                 fontFamily: "'Outfit', sans-serif",
@@ -423,7 +433,7 @@ export default function OnboardingScreen() {
           </div>
 
           {/* Body */}
-          <div style={{ marginBottom: 18, ...fadeUp(160) }}>
+          <div style={{ marginBottom: 16, ...fadeUp(slide.hasLogo ? 180 : 160) }}>
             <p
               style={{
                 fontFamily: "'Outfit', sans-serif",
@@ -438,7 +448,7 @@ export default function OnboardingScreen() {
           </div>
 
           {/* Content card */}
-          <div style={{ marginBottom: 16, ...fadeUp(240) }}>
+          <div style={{ marginBottom: 16, ...fadeUp(slide.hasLogo ? 240 : 240) }}>
             <SlideCard card={slide.card} />
           </div>
 
@@ -460,7 +470,7 @@ export default function OnboardingScreen() {
           )}
 
           {/* Hero image */}
-          <div style={{ ...fadeUp(320), marginTop: 'auto' }}>
+          <div style={{ marginBottom: 8, ...fadeUp(320) }}>
             <div
               style={{
                 width: '100%',
