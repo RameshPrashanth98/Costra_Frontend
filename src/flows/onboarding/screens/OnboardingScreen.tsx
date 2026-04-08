@@ -147,7 +147,7 @@ const SLIDES: SlideData[] = [
       ],
     },
     hero: '/hifi-heroes/onboarding-3.png',
-    heroPosition: 'center 66%',
+    heroPosition: 'center center',
     cta: 'Next',
   },
   {
