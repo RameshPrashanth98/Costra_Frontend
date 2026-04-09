@@ -5,7 +5,7 @@ milestone_name: milestone
 status: completed
 stopped_at: Completed 01-scaffold-01-01-PLAN.md
 last_updated: "2026-04-08T04:34:35.000Z"
-last_activity: 2026-04-08 — Quick tasks: OTP screen, currency fix to LKR, 4 onboarding hero images replaced
+last_activity: 2026-04-09 — Removed profile icon from home screen header
 progress:
   total_phases: 7
   completed_phases: 1
@@ -92,10 +92,11 @@ None.
 | 260407-pik | Onboarding slide 1 HIFI rebuild — centered stacked logo, visible eyebrow, fixed hero | 2026-04-07 | 28518a3 | OnboardingScreen.tsx |
 | 260408-b5i | Login OTP verification screen — 4-digit input, countdown timer, auth flow wiring | 2026-04-08 | 9809540, f8edd67 | LoginOtpScreen.tsx, router.tsx, LoginScreen.tsx, main.tsx |
 | 260408-bwy | Change all currency from Indian Rupee (₹) to Sri Lankan Rs. across the app | 2026-04-08 | 972ef2d | HomeScreen.tsx, AllTransactionsScreen.tsx, TransactionDetailsScreen.tsx, VoiceEntryScreen.tsx, NotificationsScreen.tsx, ProfileScreen.tsx, SettingsScreen.tsx |
+| 260409-rn9 | Remove profile icon from home screen header | 2026-04-09 | 075d084 | HomeScreen.tsx |
 
 ## Session Continuity
 
-Last session: 2026-04-08T04:34:35Z
-Stopped at: Quick tasks session complete — built Login OTP screen, fixed all currency to Sri Lankan Rs., replaced all 4 onboarding hero images with uploaded illustrations, pushed to GitHub.
+Last session: 2026-04-09T14:24:18Z
+Stopped at: Completed quick task 260409-rn9 — removed redundant profile icon from home screen header.
 Resume file: None
 Next up: Phase 2 (Design Tokens) — no CONTEXT.md exists yet, suggest /gsd:discuss-phase 2 first.
