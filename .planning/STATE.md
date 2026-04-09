@@ -95,10 +95,11 @@ None.
 | 260409-rn9 | Remove profile icon from home screen header | 2026-04-09 | 075d084 | HomeScreen.tsx |
 | 260409-rsr | Notification screen with working filter tabs (All, Alerts, Reminders, Income) | 2026-04-09 | f8e6d22 | NotificationsScreen.tsx |
 | 260409-rw9 | Remove horizontal scrollbar from Today's Spending on home screen | 2026-04-09 | e4f5292 | HomeScreen.tsx |
+| 260409-rz2 | Fix amount input on Track Expense/Income screens for manual entry | 2026-04-09 | 16d5645 | TrackScreen.tsx |
 
 ## Session Continuity
 
 Last session: 2026-04-09T14:24:18Z
-Stopped at: Completed quick task 260409-rw9 — removed horizontal scrollbar from home screen.
+Stopped at: Completed quick task 260409-rz2 — fixed amount input on Track screens for manual entry.
 Resume file: None
 Next up: Phase 2 (Design Tokens) — no CONTEXT.md exists yet, suggest /gsd:discuss-phase 2 first.
