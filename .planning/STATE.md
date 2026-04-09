@@ -93,10 +93,11 @@ None.
 | 260408-b5i | Login OTP verification screen — 4-digit input, countdown timer, auth flow wiring | 2026-04-08 | 9809540, f8edd67 | LoginOtpScreen.tsx, router.tsx, LoginScreen.tsx, main.tsx |
 | 260408-bwy | Change all currency from Indian Rupee (₹) to Sri Lankan Rs. across the app | 2026-04-08 | 972ef2d | HomeScreen.tsx, AllTransactionsScreen.tsx, TransactionDetailsScreen.tsx, VoiceEntryScreen.tsx, NotificationsScreen.tsx, ProfileScreen.tsx, SettingsScreen.tsx |
 | 260409-rn9 | Remove profile icon from home screen header | 2026-04-09 | 075d084 | HomeScreen.tsx |
+| 260409-rsr | Notification screen with working filter tabs (All, Alerts, Reminders, Income) | 2026-04-09 | f8e6d22 | NotificationsScreen.tsx |
 
 ## Session Continuity
 
 Last session: 2026-04-09T14:24:18Z
-Stopped at: Completed quick task 260409-rn9 — removed redundant profile icon from home screen header.
+Stopped at: Completed quick task 260409-rsr — notification screen with working filter tabs.
 Resume file: None
 Next up: Phase 2 (Design Tokens) — no CONTEXT.md exists yet, suggest /gsd:discuss-phase 2 first.
