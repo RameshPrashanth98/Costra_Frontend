@@ -138,9 +138,9 @@ export default function HomeScreen() {
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#FAFAFA' }}>Today's Spending</p>
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.9rem', color: '#FAFAFA' }}>Rs.1,255</p>
           </div>
-          <div className="flex" style={{ gap: 10, overflowX: 'auto', paddingBottom: 4 }}>
+          <div className="flex" style={{ gap: 10 }}>
             {/* Food */}
-            <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, minWidth: 120, flexShrink: 0 }}>
+            <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, flex: 1, minWidth: 0 }}>
               <div style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(245,158,11,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}>
                 <Utensils size={18} strokeWidth={1.5} color="#F59E0B" />
               </div>
@@ -148,7 +148,7 @@ export default function HomeScreen() {
               <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>Rs.580</p>
             </div>
             {/* Transport */}
-            <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, minWidth: 120, flexShrink: 0 }}>
+            <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, flex: 1, minWidth: 0 }}>
               <div style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(59,130,246,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}>
                 <Bus size={18} strokeWidth={1.5} color="#3B82F6" />
               </div>
@@ -156,7 +156,7 @@ export default function HomeScreen() {
               <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, fontSize: '0.95rem', color: '#FAFAFA', marginTop: 4 }}>Rs.375</p>
             </div>
             {/* Shopping */}
-            <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, minWidth: 120, flexShrink: 0 }}>
+            <div style={{ background: '#0A0A0B', border: '1px solid #1C1C1F', borderRadius: 14, padding: 16, flex: 1, minWidth: 0 }}>
               <div style={{ width: 36, height: 36, borderRadius: 9999, background: 'rgba(168,85,247,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 10 }}>
                 <ShoppingBag size={18} strokeWidth={1.5} color="#A855F7" />
               </div>
