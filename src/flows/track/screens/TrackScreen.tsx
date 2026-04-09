@@ -309,18 +309,60 @@ export default function TrackScreen() {
         {/* Amount Input Section */}
         <div className="flex flex-col items-center" style={{ padding: '20px 20px 24px', ...fadeUp(100) }}>
           <p style={fieldLabel}>Enter Amount</p>
-          <p
-            style={{
-              fontFamily: "'Outfit', sans-serif",
-              fontWeight: 900,
-              fontSize: '2.6rem',
-              color: '#FAFAFA',
-              lineHeight: 1.1,
-              marginTop: 8,
-            }}
-          >
-            {'Rs.'}{amount}
-          </p>
+          <div className="flex items-center" style={{ marginTop: 8 }}>
+            <span
+              style={{
+                fontFamily: "'Outfit', sans-serif",
+                fontWeight: 900,
+                fontSize: '2.6rem',
+                color: '#FAFAFA',
+                lineHeight: 1.1,
+              }}
+            >
+              Rs.
+            </span>
+            <input
+              type="text"
+              inputMode="decimal"
+              value={amount}
+              onChange={(e) => {
+                const val = e.target.value.replace(/[^0-9.]/g, '');
+                // Allow only one decimal point
+                const parts = val.split('.');
+                const sanitized = parts.length > 2
+                  ? parts[0] + '.' + parts.slice(1).join('')
+                  : val;
+                setAmount(sanitized || '0');
+              }}
+              onFocus={(e) => {
+                if (amount === '0.00' || amount === '0') {
+                  setAmount('');
+                }
+                // Move cursor to end
+                const len = e.target.value.length;
+                e.target.setSelectionRange(len, len);
+              }}
+              onBlur={() => {
+                if (amount === '' || amount === '.') {
+                  setAmount('0.00');
+                }
+              }}
+              style={{
+                fontFamily: "'Outfit', sans-serif",
+                fontWeight: 900,
+                fontSize: '2.6rem',
+                color: '#FAFAFA',
+                lineHeight: 1.1,
+                background: 'transparent',
+                border: 'none',
+                outline: 'none',
+                width: `${Math.max(amount.length, 1) * 1.5 + 0.5}ch`,
+                maxWidth: '70vw',
+                textAlign: 'left',
+                padding: 0,
+              }}
+            />
+          </div>
           <div
             style={{
               width: 60,
