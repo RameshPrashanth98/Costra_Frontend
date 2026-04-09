@@ -44,6 +44,35 @@ function StatusBar() {
   );
 }
 
+// ─── Notification types & data ──────────────────────────────────────────────
+type NotifType = 'ALERTS' | 'REMINDERS' | 'INCOME';
+
+interface Notification {
+  id: number;
+  title: string;
+  time: string;
+  type: NotifType;
+  borderColor?: string;
+  showLink?: boolean;
+  section: 'TODAY' | 'YESTERDAY' | 'THIS WEEK';
+}
+
+const NOTIFICATIONS: Notification[] = [
+  // TODAY
+  { id: 1, title: 'You might run out of budget today', time: '15 min ago', type: 'ALERTS', borderColor: '#EF4444', showLink: true, section: 'TODAY' },
+  { id: 2, title: 'You spent more than usual on food this week', time: '2h ago', type: 'ALERTS', borderColor: '#EF4444', section: 'TODAY' },
+  { id: 3, title: "Don't forget to add your expenses for today", time: '5h ago', type: 'REMINDERS', section: 'TODAY' },
+  { id: 4, title: 'Salary of Rs.45,000 received to Commercial Bank account', time: '8h ago', type: 'INCOME', borderColor: '#3B82F6', section: 'TODAY' },
+  // YESTERDAY
+  { id: 5, title: 'Your transport spending dropped by 20% this week', time: 'Yesterday, 3:15 PM', type: 'ALERTS', section: 'YESTERDAY' },
+  { id: 6, title: 'You have 3 unlogged expenses from yesterday', time: 'Yesterday, 10:00 AM', type: 'REMINDERS', section: 'YESTERDAY' },
+  { id: 7, title: 'Great job! You stayed within budget yesterday', time: 'Yesterday, 9:00 AM', type: 'ALERTS', section: 'YESTERDAY' },
+  // THIS WEEK
+  { id: 8, title: 'Freelance payment of Rs.12,500 received', time: 'Mon, 2:30 PM', type: 'INCOME', borderColor: '#3B82F6', section: 'THIS WEEK' },
+  { id: 9, title: 'Electricity bill reminder — CEB due in 3 days', time: 'Mon, 9:00 AM', type: 'REMINDERS', section: 'THIS WEEK' },
+  { id: 10, title: 'Weekly spending summary ready', time: 'Sun, 8:00 PM', type: 'REMINDERS', showLink: true, section: 'THIS WEEK' },
+];
+
 // ─── Notification Card ───────────────────────────────────────────────────────
 interface NotifCardProps {
   title: string;
@@ -71,14 +100,27 @@ function NotifCard({ title, time, borderColor = '#1C1C1F', showLink = false }: N
 const FILTERS = ['ALL', 'ALERTS', 'REMINDERS', 'INCOME'] as const;
 type Filter = typeof FILTERS[number];
 
+const SECTIONS = ['TODAY', 'YESTERDAY', 'THIS WEEK'] as const;
+
 export default function NotificationsScreen() {
   const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState<Filter>('ALL');
 
+  const filtered = activeFilter === 'ALL'
+    ? NOTIFICATIONS
+    : NOTIFICATIONS.filter((n) => n.type === activeFilter);
+
+  const groupedSections = SECTIONS
+    .map((section) => ({
+      label: section,
+      items: filtered.filter((n) => n.section === section),
+    }))
+    .filter((group) => group.items.length > 0);
+
   return (
     <>
       <style>{KEYFRAMES}</style>
-      <div style={{ background: '#050505', paddingBottom: 20 }}>
+      <div style={{ background: '#050505', minHeight: '100dvh', paddingBottom: 20 }}>
         <StatusBar />
 
         {/* Top bar */}
@@ -105,70 +147,54 @@ export default function NotificationsScreen() {
 
         {/* Filter chips */}
         <div className="flex" style={{ gap: 8, padding: '0 20px', marginTop: 16, overflowX: 'auto', paddingBottom: 4, ...fadeUp(200) }}>
-          {FILTERS.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              onClick={() => setActiveFilter(filter)}
-              style={
-                activeFilter === filter
-                  ? { padding: '8px 16px', borderRadius: 9999, background: '#C8FF00', border: '1.5px solid #C8FF00', color: '#050505', fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap' }
-                  : { padding: '8px 16px', borderRadius: 9999, background: 'transparent', border: '1.5px solid #27272A', color: '#A1A1AA', fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap' }
-              }
-            >
-              {filter}
-            </button>
-          ))}
+          {FILTERS.map((filter) => {
+            const count = filter === 'ALL'
+              ? NOTIFICATIONS.length
+              : NOTIFICATIONS.filter((n) => n.type === filter).length;
+            return (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => setActiveFilter(filter)}
+                style={
+                  activeFilter === filter
+                    ? { padding: '8px 16px', borderRadius: 9999, background: '#C8FF00', border: '1.5px solid #C8FF00', color: '#050505', fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', letterSpacing: '0.06em', textTransform: 'uppercase' as const, fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap' as const }
+                    : { padding: '8px 16px', borderRadius: 9999, background: 'transparent', border: '1.5px solid #27272A', color: '#A1A1AA', fontFamily: "'JetBrains Mono', monospace", fontSize: '0.65rem', letterSpacing: '0.06em', textTransform: 'uppercase' as const, fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap' as const }
+                }
+              >
+                {filter} ({count})
+              </button>
+            );
+          })}
         </div>
 
-        {/* TODAY section */}
-        <div style={{ padding: '0 20px', marginTop: 20, ...fadeUp(300) }}>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.6rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 12 }}>
-            TODAY
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <NotifCard
-              title="You might run out of budget today"
-              time="15 min ago"
-              borderColor="#EF4444"
-              showLink
-            />
-            <NotifCard
-              title="You spent more than usual on food this week"
-              time="2h ago"
-            />
-            <NotifCard
-              title="Don't forget to add your expenses for today"
-              time="5h ago"
-            />
-            <NotifCard
-              title="Salary of Rs.45,000 received to Commercial Bank account"
-              time="8h ago"
-              borderColor="#3B82F6"
-            />
+        {/* Notification sections */}
+        {groupedSections.length > 0 ? (
+          groupedSections.map((group, gi) => (
+            <div key={group.label} style={{ padding: '0 20px', marginTop: gi === 0 ? 20 : 24, ...fadeUp(300 + gi * 100) }}>
+              <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.6rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 12 }}>
+                {group.label}
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {group.items.map((notif) => (
+                  <NotifCard
+                    key={notif.id}
+                    title={notif.title}
+                    time={notif.time}
+                    {...(notif.borderColor ? { borderColor: notif.borderColor } : {})}
+                    {...(notif.showLink ? { showLink: notif.showLink } : {})}
+                  />
+                ))}
+              </div>
+            </div>
+          ))
+        ) : (
+          <div style={{ padding: '60px 20px', textAlign: 'center', ...fadeUp(300) }}>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 500, fontSize: '0.9rem', color: '#52525B' }}>
+              No notifications
+            </p>
           </div>
-        </div>
-
-        {/* YESTERDAY section */}
-        <div style={{ padding: '0 20px', marginTop: 24, ...fadeUp(400) }}>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.6rem', color: '#52525B', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 12 }}>
-            YESTERDAY
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <NotifCard
-              title="Your transport spending dropped by 20% this week"
-              time="Yesterday, 3:15 PM"
-            />
-            <NotifCard
-              title="You have 3 unlogged expenses from yesterday"
-              time="Yesterday, 10:00 AM"
-            />
-            <NotifCard
-              title="Great job! You stayed within budget yesterday"
-              time="Yesterday, 9:00 AM"
-            />
-          </div>
-        </div>
+        )}
       </div>
     </>
   );
