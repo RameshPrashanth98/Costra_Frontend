@@ -309,7 +309,7 @@ export default function TrackScreen() {
         {/* Amount Input Section */}
         <div className="flex flex-col items-center" style={{ padding: '20px 20px 24px', ...fadeUp(100) }}>
           <p style={fieldLabel}>Enter Amount</p>
-          <div className="flex items-center" style={{ marginTop: 8 }}>
+          <div className="flex items-center justify-center" style={{ marginTop: 8, width: '100%' }}>
             <span
               style={{
                 fontFamily: "'Outfit', sans-serif",
