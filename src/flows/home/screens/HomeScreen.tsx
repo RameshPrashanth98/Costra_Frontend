@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import {
   Bell,
-  User,
   AlertTriangle,
   Lightbulb,
   Utensils,
@@ -101,9 +100,6 @@ export default function HomeScreen() {
                   background: '#EF4444',
                 }}
               />
-            </button>
-            <button type="button" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
-              <User size={22} strokeWidth={1.5} color="#A1A1AA" />
             </button>
           </div>
         </div>
